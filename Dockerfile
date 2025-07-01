@@ -2,8 +2,7 @@
 FROM maven:3.9.6-eclipse-temurin-8 as builder
 
 # Install Chrome & dependencies
-RUN apt-get update && apt-get install -y \
-    wget gnupg unzip curl \
+RUN
     && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
     && apt install -y ./google-chrome-stable_current_amd64.deb \
     && rm google-chrome-stable_current_amd64.deb
